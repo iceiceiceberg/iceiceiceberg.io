@@ -1,0 +1,58 @@
+<?php  
+	session_start();
+    $username = $_POST["username"];  
+    $password = $_POST["password"];  
+    if($username == "" || $password == "") 
+    {  
+        echo "<script>alert('请输入用户名或密码！'); history.go(-1);</script>";  
+    }  
+    else 
+    {  
+		$db = new mysqli('localhost', 'root', '~lc1117~', 'signin');
+		if(mysqli_connect_errno()){
+			echo '<p>Error: Could not connect to database.<br />
+			Please try again later.</ p>';
+			exit;
+		}  
+		$query = "SELECT number, password 
+				FROM sign_class WHERE number = ? AND password = ?";
+		$stmt = $db->prepare($query);
+		$stmt->bind_param('is', $username, $password);
+		$stmt->execute();
+		$stmt->store_result();
+		if($stmt->affected_rows > 0)  
+    {  
+			$flag = 1;				
+    }
+		else{
+			$query = "SELECT idnumber, password 
+				FROM check_teachers WHERE idnumber = ? AND password = ?";
+			$stmt = $db->prepare($query);
+			$stmt->bind_param('is', $username, $password);
+			$stmt->execute();
+			$stmt->store_result();
+			if($stmt->affected_rows > 0)  
+      {  
+				$flag = 2;				
+      }
+		}
+        if($flag == 1)
+        {
+        	$_SESSION['username'] = $username;
+					echo '<script type="text/javascript">';
+					echo 'window.location.href="student.html";';
+					echo '</script>';				
+        } 
+		else if($flag == 2)
+        {
+        	$_SESSION['username'] = $username; 
+					echo '<script type="text/javascript">';
+					echo 'window.location.href="teacher.html";';
+					echo '</script>';				
+        } 
+        else 
+        {  
+        	echo "<script>alert('用户名或密码不正确！');history.go(-1);</script>";  
+        }  
+    }  
+?>

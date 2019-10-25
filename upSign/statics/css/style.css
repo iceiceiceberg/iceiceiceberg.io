@@ -1,0 +1,33 @@
+body {
+  padding-top: 30px;
+}
+
+th, td {
+  text-align: center;
+}
+
+#page-loader {
+    background: url(../img/cover.gif) no-repeat center center fixed;
+    background-color: #FFF;
+}
+
+#page-loader:after {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.float{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    cursor: pointer;
+}
+
+.my-float{
+    margin-top:24px;
+}

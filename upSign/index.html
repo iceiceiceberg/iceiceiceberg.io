@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>入口</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <link href="statics/css/bootstrap.min.css" rel="stylesheet">
+    <link href="statics/css/oneui.min.css" id="css-main" rel="stylesheet">
+    <link href="statics/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="block">
+        <div class="block-content block-content-full">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img class="img-avatar img-avatar128 img-avatar-thumb push-20" <!--src="statics/img/logo.png"--> >
+                </div>
+                <div class="col-lg-12">
+                    <a class="block block-link-hover1 text-center" href="register.html">
+                        <div class="block-content block-content-full bg-danger">
+                            <i class="si si-user-follow fa-3x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full bg-danger block-content-mini text-white">
+                            <h4>信息注册 >>></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-12">
+                    <a class="block block-link-hover1 text-center" href="student.html">
+                        <div class="block-content block-content-full bg-success">
+                            <i class="si si-users fa-3x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full bg-success block-content-mini text-white">
+                            <h4>我是学生 >>></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-12">
+                    <a class="block block-link-hover1 text-center" href="login.html">
+                        <div class="block-content block-content-full bg-info">
+                            <i class="si si-user fa-3x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full bg-info block-content-mini text-white">
+                            <h4>我是老师 >>></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Apps Modal -->
+    <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-sm modal-dialog modal-dialog-popout">
+            <div class="modal-content">
+                <!-- Apps Block -->
+                <div class="block block-themed block-transparent">
+                    <div class="block-header bg-primary-dark">
+                        <ul class="block-options">
+                            <li>
+                                <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+                            </li>
+                        </ul>
+                        <h3 class="block-title">导航栏</h3>
+                    </div>
+                    <div class="block-content">
+                        <div class="row text-center">
+                            <div class="col-xs-6">
+                                <a class="block block-rounded" href="index.html">
+                                    <div class="block-content text-white bg-primary-dark">
+                                        <i class="si si-rocket fa-2x"></i>
+                                        <div class="font-w600 push-15-t push-15">引导主页</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a class="block block-rounded" href="face.html">
+                                    <div class="block-content text-white bg-danger">
+                                        <i class="si si-user-follow fa-2x"></i>
+                                        <div class="font-w600 push-15-t push-15">注册</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a class="block block-rounded" href="student.html">
+                                    <div class="block-content text-white bg-success">
+                                        <i class="si si-users fa-2x"></i>
+                                        <div class="font-w600 push-15-t push-15">学生端</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a class="block block-rounded" href="login.html">
+                                    <div class="block-content text-white bg-info">
+                                        <i class="si si-user fa-2x"></i>
+                                        <div class="font-w600 push-15-t push-15">教师端</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Apps Block -->
+            </div>
+        </div>
+    </div>
+    <!-- END Apps Modal -->
+    <div class="float btn-primary" data-toggle="modal" data-target="#apps-modal" type="button"><i class="fa fa-align-justify my-float"></i></div>
+    <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+        <!--<div class="pull-right">
+            Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="https://sangsir.com" target="_blank">SangSir</a>
+        </div>-->
+        <div class="pull-left">
+            <a class="font-w600" href="https://sangsir.com" target="_blank"></a> 
+        </div>
+    </footer>
+</div>
+    <!--<script src="statics/js/oneui.min.js"></script>
+    <script>
+    $(function () {
+        App.loader('show');
+        setTimeout(function () {
+            App.loader('hide');
+        }, 2000);
+    });-->
+    </script>
+</body>
+</html>
